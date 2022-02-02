@@ -8,9 +8,9 @@ import openreview
 from pdfminer.high_level import extract_text
 
 
-class Conference(ABC):
+class ConferenceLike(ABC):
     """
-    Define a Conference subclass for each conference, workshop etc. from which you want to extract data.
+    Define a ConferenceLike subclass for each conference, workshop etc. from which you want to extract data.
     Make sure to define def get_note_type.
     """
 
@@ -61,12 +61,12 @@ class Conference(ABC):
         return pdf_str
 
 
-class ICLR2019Conference(Conference):
+class ICLR2019Conference(ConferenceLike):
 
     def __init__(self):
         self.ABSTRACT = "abstract"
         self.NOTE_TYPES = {self.ABSTRACT, "metareview", "comment", "review"}
-        super(Conference, self).__init__()
+        super(ConferenceLike, self).__init__()
 
     def get_note_type(self, content: openreview.Note) -> str:
         for key in content.keys():
@@ -117,7 +117,8 @@ if __name__ == "__main__":
                              "See https://openreview-py.readthedocs.io/en/latest/get_submission_invitations.html#getting-submissions",
                         default='ICLR.cc/2019/Conference/-/Blind_Submission')
     parser.add_argument("--data_dir", type=str, help="Directory where data gets saved", default="../data/")
-    parser.add_argument("--conference_class", type=str, help="The name of the corresponding Conference class",
+    parser.add_argument("--conference_class", type=str, help="The name of the corresponding Conference class. Each "
+                                                             "conference-like object needs a Conference class",
                         default="ICLR2019Conference")
     arg_dict = vars(parser.parse_args())
     client = openreview.Client(baseurl='https://api.openreview.net')
