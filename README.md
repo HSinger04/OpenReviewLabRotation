@@ -1,5 +1,9 @@
 # OpenReviewLabRotation
 
+## Examples
+
+* [Example of extracted data](https://github.com/HSinger04/OpenReviewLabRotation/tree/main/assets/SkgkJn05YX.json)
+
 ## How-TOs
 
 ### Extracting Data
@@ -15,10 +19,17 @@ So far, getting the submissions from the following invitation ids are supported:
 
 To extract data from an unsupported conference or workshop, you need to implement a 
 subclass of ConferenceLike and the abstract method get_note_type. An example for such a subclass and method
-is the class ICLR2019Conference. When looking at TODO: Screenshot, one sees that a forum consists
-of multiple Note objects, which can be reviews, comments, etc.. The purpose of get_note_type is
-to return based on the content of a Note (see the 'content' key-value pair in TODO: Screenshot)
+is the class ICLR2019Conference. One sees that a forum consists
+of multiple Note objects, which can be reviews, comments, etc.:
+
+<div align="center">
+  <img src="https://github.com/HSinger04/OpenReviewLabRotation/tree/main/assets/forum_and_notes.png">
+</div>
+
+The purpose of get_note_type is
+to return based on the content of a Note (see the 'content' key-value pair in above image)
 the note type as a string (e.g. review, comment, etc.). 
+
 
 ## TODOs
 
