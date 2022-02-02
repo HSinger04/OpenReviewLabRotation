@@ -35,7 +35,12 @@ of multiple Note objects, which can be reviews, comments, etc.:
 
 The purpose of get_note_type is
 to return based on the content of a Note (see the 'content' key-value pair in above image)
-the note type as a string (e.g. review, comment, etc.). 
+the note type as a string. Between the following note types are distinguished in the following conferences and workshops:
+
+##### Metareview, review, comment, paper
+
+* ICLR.cc/2019/Conference/-/Blind_Submission
+
 
 
 ## TODOs
