@@ -2,7 +2,7 @@
 
 ## Examples
 
-* [Example of extracted data](https://github.com/HSinger04/OpenReviewLabRotation/tree/main/assets/SkgkJn05YX.json)
+* [Example of extracted data](https://github.com/HSinger04/OpenReviewLabRotation/blob/main/assets/SkgkJn05YX.json)
 
 ## How-TOs
 
@@ -23,7 +23,7 @@ is the class ICLR2019Conference. One sees that a forum consists
 of multiple Note objects, which can be reviews, comments, etc.:
 
 <div align="center">
-  <img src="https://github.com/HSinger04/OpenReviewLabRotation/tree/main/assets/forum_and_notes.png">
+  <img src="https://github.com/HSinger04/OpenReviewLabRotation/blob/main/assets/forum_and_notes.png">
 </div>
 
 The purpose of get_note_type is
