@@ -11,6 +11,13 @@
 All the data extraction logic is contained in extract_data.py.
 To extract data, run extract_data.py as __main__. Make sure to take a look at what arguments the ArgumentParser takes.
 
+#### OpenReview Python Client
+
+Definitely check out the [OpenReview Python Client](https://openreview-py.readthedocs.io/en/latest/), as it gets used. 
+The documentation is short and easy to read, so no worries.
+
+
+
 #### Extracting data from an unsupported conference or workshop
 
 So far, getting the submissions from the following invitation ids are supported:
@@ -32,13 +39,4 @@ the note type as a string (e.g. review, comment, etc.).
 
 
 ## TODOs
-
-* requirements.txt
-* Pointer and doc on OpenReview's API
-* Convert binary pdf to text
-
-### Question for Prof. Bruni
-
-* What should we do with comments / reply chains?
-* What should I do with information outside of content?
 
