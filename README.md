@@ -14,7 +14,10 @@ To extract data, run extract_data.py as __main__. Make sure to take a look at wh
 #### OpenReview Python Client
 
 Definitely check out the [OpenReview Python Client](https://openreview-py.readthedocs.io/en/latest/), as it gets used. 
-The documentation is short and easy to read, so no worries.
+The documentation is short and easy to read, so no worries. 
+
+Especially https://openreview-py.readthedocs.io/en/latest/get_submission_invitations.html#getting-submissions
+ is interesting for finding ids of conferences, workshops, etc. to extract data from them.
 
 
 
