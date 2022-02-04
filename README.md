@@ -54,7 +54,7 @@ the note type as a string. Between the following note types are distinguished in
   * ICLR 2014
     * A lot of paper have as decision "decision": "submitted, no decision". Haven't checked if there are any with a different value
     * Normal reviews only consist of title and text
-    * PDF: Same issues as ICLR 2014 
+    * PDF: Same issues as ICLR 2013
   * ICLR 2017
     * Metareview doesn't give a review score, but says for what the paper was accepted. (differently than ICLR 2013 though). Maybe some give a review score in the comment
     * Normal reviews give confidence and rating
