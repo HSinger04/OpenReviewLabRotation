@@ -10,7 +10,7 @@
 
 All the data extraction logic is contained in extract_data.py.
 To extract data, run extract_data.py as __main__. Make sure to take a look at what arguments the ArgumentParser takes.
-After extracting data, make sure to run data statistics and check them.
+After extracting data, make sure to run [data statistics](https://github.com/HSinger04/OpenReviewLabRotation/blob/main/src/data_wrangling/data_stats.py) and check them.
 
 #### OpenReview Python Client
 
@@ -20,7 +20,11 @@ The documentation is short and easy to read, so no worries.
 Especially https://openreview-py.readthedocs.io/en/latest/get_submission_invitations.html#getting-submissions
  is interesting for finding ids of conferences, workshops, etc. to extract data from them.
 
+#### Information of specific conferences and workshops
 
+To see for what conferences and workshops classes have already been implemented, see the subclasses
+of ConferenceLike in "extract_data.py". Make sure to especially read their doc string.
+There, under TODO, bugs are also documented.
 
 #### Extracting data from an unsupported conference or workshop
 
@@ -37,12 +41,6 @@ of multiple Note objects, which can be reviews, comments, etc.:
 The purpose of get_note_type is
 to return based on the content of a Note (see the 'content' key-value pair in above image)
 the note type as a string. To see a list of available or add new note types, please use config.py
-
-### Information of specific conferences and workshops
-
-To see for what conferences and workshops have already been implemented, see the subclasses
-of ConferenceLike in "extract_data.py". Make sure to especially read their doc string.
-There, under TODO, bugs are also documented.
 
 
 ## TODOs
