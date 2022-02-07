@@ -121,6 +121,7 @@
         "recommendation": "Reject",
         "title": "Some interesting ideas but is not mature enough for publication"
     },
+    "no_unknown_note_type": true,
     "paper_0": {
         "TL;DR": "We propose a technique that modifies CNN structures to enhance robustness while keeping high test accuracy, and raise doubt on whether current definition of adversarial examples is appropriate by generating adversarial examples able to fool humans.",
         "_bibtex": "@misc{\nluo2019random,\ntitle={{RANDOM} {MASK}: Towards Robust Convolutional Neural Networks},\nauthor={Tiange Luo and Tianle Cai and Mengxiao Zhang and Siyu Chen and Liwei Wang},\nyear={2019},\nurl={https://openreview.net/forum?id=SkgkJn05YX},\n}",
