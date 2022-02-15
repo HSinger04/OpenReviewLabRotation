@@ -62,6 +62,7 @@ For statistics on a single conference or workshop, use [extract_data.py](https:/
     * [load_hugface_dicts.py](https://github.com/HSinger04/OpenReviewLabRotation/blob/main/src/data_wrangling/load_hugface_dicts.py) is an attempt at preparing a dataset from a dict extracted by [create_hugface_dict.py](https://github.com/HSinger04/OpenReviewLabRotation/blob/main/src/data_wrangling/create_hugface_dict.py). However, the file in its current state is not useable, so it definitely needs to be worked on. The file content is more there to show what has been tried in the hopes that it helps whoever continues the work where I left off. 
     As any of the tokenized input pdf texts are too long to be fed into any transformer, the plan was to split the tokenized text into subparts such that each subparts can be fed
     into the encoder transformer of choice, the encodings would get summed together to represent the whole text and then get fed into the decoder. 
+      * It might be helpful to look at https://colab.research.google.com/drive/1Ekd5pUeCX7VOrMx94_czTkwNtLN32Uyu?usp=sharing for an idea how to do this whole thing.
   * Model training
     * Nothing has been done for model training yet. A suggestion would be to use a transformer as an encoder that can take an input with as many tokens as possible (e.g. Longformer or [Infinite Memory Transformer](https://arxiv.org/abs/2109.00301) if an implementation exists later). For Decoder, one probably doesn't have to worry about limits on the output token length so much.
 * Any TODO comments in any of the files.
