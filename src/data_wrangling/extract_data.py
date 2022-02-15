@@ -7,7 +7,7 @@ from abc import ABC, abstractmethod
 import openreview
 from pdfminer.high_level import extract_text
 
-from OpenReviewLabRotation.src.config import METAREVIEW, ETHICSREVIEW, COMMENT, REVIEW, PAPER, WITHDRAWALCONF
+from OpenReviewLabRotation.src.config import METAREVIEW, ETHICSREVIEW, COMMENT, REVIEW, PAPER, WITHDRAWALCONF, PDF
 
 ABSTRACT = "abstract"
 NO_UNKNOWN = "no_unknown_note_type"
@@ -48,7 +48,6 @@ class ConferenceLike(ABC):
             content = note.content
             note_type = ""
             note_type = self.get_note_type(content)
-            # TODO: Also include a "SKIP" string for when a note should be skipped (e.g. withdrawal submission)
             # note and skip if unknown note type
             if not note_type:
                 print("Unknown note type for " + str(subm_id) +  "! Note type candidates were: " + str(content.keys()))
@@ -278,20 +277,12 @@ def extract_subm_data(subm_id, conf_obj, save_dir):
     :return: if an unknown note type was encountered or pdf couldn't get extracted
     """
     # collect data in subm_dict
-    subm_dict = {}
-
-    # Track if unknown note type or sth. with pdf went wrong
-    unknown_note = False
-    no_pdf = False
-
     subm_dict = conf_obj.get_forum(subm_id)
-    if not NO_UNKNOWN in subm_dict.keys():
-        unknown = True
 
     try:
-        subm_dict["pdf"] = conf_obj.get_pdf_str(subm_id)
+        subm_dict[PDF] = conf_obj.get_pdf_str(subm_id)
     except Exception:
-        no_pdf = True
+        pass
 
     # Save data
     with open(join(save_dir, str(subm_id) + ".json"), "w") as outfile:

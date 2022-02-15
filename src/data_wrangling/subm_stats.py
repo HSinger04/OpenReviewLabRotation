@@ -1,8 +1,3 @@
-# TODO: Iterate through json files
-# TODO: Count the number of comments, reviews, papers, metareviews
-# TODO: Count how many papers are missing
-# TODO: Replace directory with parse arg.
-
 import re
 from json import dump, load, JSONEncoder
 from os import listdir
@@ -27,7 +22,6 @@ def pure_key(key):
 
 def get_submid(file_name):
     return file_name[:-len(".json")]
-
 
 
 def main(data_dir, dump_dir, skip_keys):
@@ -85,7 +79,6 @@ if __name__ == '__main__':
     parser.add_argument("--data_dir", type=str, help="Directory where data to summarize lies",
                         default="../../data/ICLR.cc/2019/Conference/-/Blind_Submission/submission_dicts")
     parser.add_argument("--dump_dir", type=str, help="What the stat dictionary should be called", default="stat_dict.json")
-    # TODO: Rename and description
-    parser.add_argument("--skip_keys", type=str, nargs="*", default=[COMMENT, ETHICSREVIEW, WITHDRAWALCONF])
+    parser.add_argument("--skip_keys", type=str, nargs="*", help="If any of the skip keys miss from a submission, it won't be reported", default=[COMMENT, ETHICSREVIEW, WITHDRAWALCONF])
     arg_dict = vars(parser.parse_args())
     main(**arg_dict)
