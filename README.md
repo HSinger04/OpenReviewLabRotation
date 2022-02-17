@@ -7,6 +7,7 @@ The purpose of this lab rotation was to extract reviews from openreview.net and 
 ## Examples
 
 * [Example of extracted data](https://github.com/HSinger04/OpenReviewLabRotation/blob/main/assets/SkgkJn05YX.json)
+* [All the data I had extracted](https://myshare.uni-osnabrueck.de/f/1b36cbf6954e40fdac26/)
 
 ## How-TOs
 
